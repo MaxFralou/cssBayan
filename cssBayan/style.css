@@ -27,19 +27,14 @@ section {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-
 }
 
 .bayan {
   border: 0.1rem solid #ccc;
   border-radius: 0.5rem;
   cursor: pointer;
-
 }
 
-/* .label {
-  transition: all 0.5s;
-} */
 .title-bayan {
   display: flex;
   flex-direction: row;
@@ -47,7 +42,7 @@ section {
   padding: 0.5rem;
   cursor: pointer;
   font-weight: bold;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s;
 }
 
 .btn {
@@ -76,8 +71,6 @@ section {
   display: none;
 }
 
-
-
 .bayan input[type="radio"]:checked+.label {
   color: gold
 }
@@ -88,10 +81,7 @@ section {
 
 .bayan input[type="radio"]:not(:checked)+.label+.mem-pic {
   opacity: 0;
-
 }
-
-
 
 @media (hover: hover) {
 
@@ -120,7 +110,6 @@ section {
     height: auto;
     opacity: 1;
   }
-
 
 }
 
