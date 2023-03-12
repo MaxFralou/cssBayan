@@ -19,6 +19,10 @@ h1 {
   color: gold;
 }
 
+section {
+  cursor: pointer;
+}
+
 .accordion {
   display: flex;
   flex-direction: column;
@@ -33,14 +37,17 @@ h1 {
 
 }
 
-.label {
+/* .label {
+  transition: all 0.5s;
+} */
+.title-bayan {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0.5rem;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .btn {
@@ -53,18 +60,23 @@ h1 {
   display: block;
   max-width: 50%;
   height: 0;
+  opacity: 0;
   margin: 0 auto;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.bayan input[type="radio"]:checked+.label .mem-pic {
+  height: auto;
+  opacity: 1;
+
 }
 
 .bayan input[type="radio"] {
   display: none;
 }
 
-.bayan input[type="radio"]:checked+.label+.mem-pic {
-  height: auto;
-}
+
 
 .bayan input[type="radio"]:checked+.label {
   color: gold
@@ -104,10 +116,12 @@ h1 {
     transform: rotate(90deg);
   }
 
-  .bayan input[type="radio"]:hover+.label~.mem-pic {
+  .bayan input[type="radio"]:hover+.label .mem-pic {
     height: auto;
     opacity: 1;
   }
+
+
 }
 
 @media all and (min-width: 820px) {
