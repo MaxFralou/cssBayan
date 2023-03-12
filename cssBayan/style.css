@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
   font-family: 'Rubik', sans-serif;
 }
 
@@ -10,3 +9,115 @@ html {
   box-sizing: inherit;
 }
 
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+h1 {
+  color: gold;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+}
+
+.bayan {
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.btn {
+  width: 1.5rem;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.mem-pic {
+  display: block;
+  max-width: 50%;
+  height: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.bayan input[type="radio"] {
+  display: none;
+}
+
+.bayan input[type="radio"]:checked+.label+.mem-pic {
+  height: auto;
+}
+
+.bayan input[type="radio"]:checked+.label {
+  color: gold
+}
+
+.bayan input[type="radio"]:checked+.label .btn {
+  transform: rotate(90deg);
+}
+
+.bayan input[type="radio"]:not(:checked)+.label+.mem-pic {
+  opacity: 0;
+
+}
+
+
+
+@media (hover: hover) {
+
+  .btn {
+    opacity: 0;
+  }
+
+  .accordion:hover .btn {
+    opacity: 1;
+  }
+
+  .accordion:hover .label:not(:checked),
+  .bayan input[type="radio"]:checked~.label:not(:checked) {
+    color: gold;
+  }
+
+  .bayan input[type="radio"]:hover+.label .btn {
+    transform: rotate(90deg);
+  }
+
+  .bayan input[type="radio"]:hover+.label .btn {
+    transform: rotate(90deg);
+  }
+
+  .bayan input[type="radio"]:hover+.label~.mem-pic {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+@media all and (min-width: 820px) {
+  html {
+    font-size: 1.8rem;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  html {
+    font-size: 3rem;
+  }
+}
